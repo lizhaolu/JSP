@@ -22,6 +22,5 @@
 </form>
 
 
-$END$
 </body>
 </html>
