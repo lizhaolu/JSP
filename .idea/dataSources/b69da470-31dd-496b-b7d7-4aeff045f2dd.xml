@@ -30,16 +30,34 @@
       <DataType>int(11)|0</DataType>
     </column>
     <column id="17" parent="13" name="username">
-      <Position>1</Position>
-      <DataType>varchar(20)|0</DataType>
-    </column>
-    <column id="18" parent="13" name="password">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="19" parent="13" name="type">
+    <column id="18" parent="13" name="password">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
+    <column id="19" parent="13" name="type">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="20" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="13" name="email">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="22" parent="13" name="telphone">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="23" parent="13" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
