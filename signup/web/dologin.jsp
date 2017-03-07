@@ -44,8 +44,6 @@
 
         statement.executeQuery();
         ResultSet set = statement.getResultSet();
-
-
         if (set!=null){
             out.print("欢迎"+username+"登录");
         }else {
