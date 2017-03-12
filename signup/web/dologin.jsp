@@ -1,8 +1,8 @@
-<%@ page import="javax.lang.model.element.Name" %>
-<%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.ResultSet" %><%--
+<%@ page import="java.sql.ResultSet" %>
+<%--
   Created by IntelliJ IDEA.
   User: ASUS
   Date: 2017/3/6
@@ -17,10 +17,10 @@
 <body>
 <%!
     //com.mysql.cj.jdbc.Driver
-    public static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    public static final String URL = "jdbc:mysql://localhost:3306/jspclass?autoReconnect=true&useSSL=false";
-    public static final String USERNAME = "root";
-    public static final String PASSWORD = "1234";
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost:3306/jspclass?autoReconnect=true&useSSL=false";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "1234";
 %>
 
 <%
@@ -44,7 +44,7 @@
 
         statement.executeQuery();
         ResultSet set = statement.getResultSet();
-        if (set!=null){
+        if (set.absolute(1)){
             out.print("欢迎"+username+"登录");
         }else {
             out.print("用户名或密码错误");
