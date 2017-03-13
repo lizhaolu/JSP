@@ -16,7 +16,7 @@
 <body>
 <%!
     public static final String DRIVER = "com.mysql.jdbc.Driver";
-    public static final String URL = "jdbc:mysql://localhost:3306/jspclass?autoReconnect=true&useSSL=false";
+    public static final String URL = "jdbc:mysql://localhost:3306/jspclass?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=UTC&autoReconnect=true&useSSL=false";
     public static final String USERNAME = "root";
     public static final String PASSWORD = "1234";
 %>
@@ -30,6 +30,7 @@
         PreparedStatement ps = connection.prepareStatement(sql);
         ResultSet set = ps.executeQuery();
 %>
+
 <table border="1">
 
     <tr>
@@ -46,11 +47,13 @@
     <%="<tr>" + "<td>" + set.getString("id") + "</td>"%>
     <%="<td>" + set.getString("username") + "</td>"%>
     <%="<td>" + set.getString("type") + "</td>" %>
-    <td><a href=\"index.jsp\">添加</a></td>
-    <td><a href=doDelete.jsp?id=<%=set.getString("username")%>>删除</a></td>
+    <td><a href=doDelete.jsp?id=<%=set.getInt("id")%>>删除</a></td>
+    <td><a href=doFindInfo.jsp?id=<%=set.getInt("id")%>>修改</a></td>
     </tr>
 
-    <% }
+    <%
+
+            }
     } catch (Exception e) {
 
     }

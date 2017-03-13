@@ -13,60 +13,62 @@
     <schema id="7" parent="1" name="mysql2"/>
     <schema id="8" parent="1" name="performance_schema"/>
     <schema id="9" parent="1" name="sys"/>
-    <schema id="10" parent="1" name="jspdemo"/>
-    <table id="11" parent="2" name="t_student"/>
-    <table id="12" parent="2" name="t_teacher"/>
-    <column id="13" parent="11" name="Sid">
+    <schema id="10" parent="1" name="hahaha"/>
+    <schema id="11" parent="1" name="jspclass"/>
+    <schema id="12" parent="1" name="testdatabase"/>
+    <table id="13" parent="2" name="t_student"/>
+    <table id="14" parent="2" name="t_teacher"/>
+    <column id="15" parent="13" name="Sid">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="14" parent="11" name="Sname">
+    <column id="16" parent="13" name="Sname">
       <Position>2</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="11" name="Spassword">
+    <column id="17" parent="13" name="Spassword">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="16" parent="11" name="Stelphone">
+    <column id="18" parent="13" name="Stelphone">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="17" parent="11" name="Sheadimg">
+    <column id="19" parent="13" name="Sheadimg">
       <Position>5</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="18" parent="11" name="PRIMARY">
+    <key id="20" parent="13" name="PRIMARY">
       <ColNames>Sid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="19" parent="12" name="Tid">
+    <column id="21" parent="14" name="Tid">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="20" parent="12" name="Tname">
+    <column id="22" parent="14" name="Tname">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="21" parent="12" name="Tpassword">
+    <column id="23" parent="14" name="Tpassword">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="22" parent="12" name="Ttelphone">
+    <column id="24" parent="14" name="Ttelphone">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="23" parent="12" name="PRIMARY">
+    <key id="25" parent="14" name="PRIMARY">
       <ColNames>Tid</ColNames>
       <Primary>1</Primary>
     </key>

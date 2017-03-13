@@ -41,7 +41,6 @@
         statement.setString(1, username);
         statement.setString(2, password);
         statement.setString(3,types);
-
         statement.executeQuery();
         ResultSet set = statement.getResultSet();
         if (set.absolute(1)){
@@ -50,6 +49,9 @@
             out.print("用户名或密码错误");
         }
 
+        set.close();
+        statement.close();
+        connection.close();
     } catch (Exception e) {
 
         System.out.println(e);

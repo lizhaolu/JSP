@@ -30,21 +30,6 @@
         <property name="useSSL" value="true" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="qq@123.207.18.179" uuid="32560317-3c0f-438c-8236-9de48cf5d9d7">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://123.207.18.179:3306/qq</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-        <property name="useSSL" value="true" />
-      </driver-properties>
-    </data-source>
     <data-source source="LOCAL" name="test@120.76.218.251" uuid="35e82399-c5c4-44c2-b732-e9fd9f0ce54f">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
