@@ -25,16 +25,15 @@
     String id = request.getParameter("id");
     try {
         Class.forName(DRIVER);
-        try {
-            Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            //language=SQL
-            String sql = "select * from jspclass.user WHERE id=?;";
+        Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        //language=SQL
+        String sql = "select * from jspclass.user WHERE id=?;";
 
-            PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, id);
-            ResultSet set = ps.executeQuery();
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, id);
+        ResultSet set = ps.executeQuery();
 
-            if (set.next()) {
+        if (set.next()) {
 %>
 
 <form action="doModifiy.jsp?id=<%=set.getInt("id")%>" method="post">
@@ -50,18 +49,15 @@
 </form>
 
 <%
-                set.close();
-                ps.close();
-                connection.close();
-            } else {
-                out.println("没有找到该用户");
-            }
-
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+            set.close();
+            ps.close();
+            connection.close();
+        } else {
+            out.println("没有找到该用户");
         }
-    } catch (ClassNotFoundException e) {
+
+
+    } catch (SQLException e) {
         e.printStackTrace();
     }
 %>

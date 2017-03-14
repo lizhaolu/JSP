@@ -38,7 +38,7 @@
         statement.execute();
         statement.close();
         connection.close();
-        out.print("您(" + username + ")已经注册成功,3秒后跳转到登录界面");
+        out.print("您(" + username + ")已经注册成功,3秒后跳转到注册页面");
         response.setHeader("refresh", "3;URL=index.jsp");
     } catch (ClassNotFoundException | SQLException e) {
         e.printStackTrace();

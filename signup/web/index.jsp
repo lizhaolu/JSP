@@ -13,7 +13,7 @@
     <title>welcome</title>
 </head>
 <body>
-<form action="doInsert.jsp" method="post" >
+<form action="doInsert.jsp" method="post">
 
     <table>
 

@@ -54,11 +54,13 @@
     <%
 
             }
-    } catch (Exception e) {
+        } catch (Exception e) {
 
-    }
+        }
     %>
 
 </table>
+
+<a href="index.jsp">转跳到注册页</a>
 </body>
 </html>
