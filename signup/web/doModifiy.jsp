@@ -22,7 +22,7 @@
     public static final String USERNAME = "root";
     public static final String PASSWORD = "1234";
 %>
-<%
+<%Class.forName("com.mysql.jdbc.Driver");
     request.setCharacterEncoding("utf-8");
     String username = request.getParameter("username");
     String password = request.getParameter("password");
